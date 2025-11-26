@@ -2,11 +2,13 @@
 This repo implements an efficient version of MuonClip using triton. (https://arxiv.org/pdf/2507.20534)
 
 
+
 ## Usage
 
 ### Option 1: Using MuonClip (Recommended)
 
 MuonClip combines Muon optimizer + QK-Clip for attention stability.
+
 Note that unlike the paper, I removed the if statement and add a fallback of gamma=1.0 to avoid conditional-branching on multi-gpu setup (DDP).
 
 ```python
@@ -185,5 +187,4 @@ The Muon optimizer implementation is based on [Flash-Muon](https://github.com/ni
 }
 ```
 
-The QK-Clip implementation is based on the approach described in the Kimi K2 paper for attention stability.
-
+The QK-Clip implementation I made was based on the approach described in the Kimi K2 paper.

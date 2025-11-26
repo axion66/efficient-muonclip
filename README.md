@@ -162,6 +162,17 @@ class TransformerModel(nn.Module):
 **Disclaimer:** QK-Clip does **not support fused QKV linear layers**. You must use separate linear projections for Q, K, and V so that QK-Clip can independently scale the Q and K weight matrices per head. Same for MLA.
 
 
+
+## Citation
+```
+@misc{muonclip2025,
+  author       = {axion66},
+  title        = {Efficient MuonClip: Flash-Muon + QKClip},
+  year         = {2025},
+  url          = {https://github.com/axion66/efficient-muonclip}
+}
+```
+
 ## Acknowledgement
 The Muon optimizer implementation is based on [Flash-Muon](https://github.com/nil0x9/flash-muon) by Tianyang Lin, which provides an efficient implementation of Muon.
 
@@ -176,16 +187,3 @@ The Muon optimizer implementation is based on [Flash-Muon](https://github.com/ni
 
 The QK-Clip implementation is based on the approach described in the Kimi K2 paper for attention stability.
 
-
-## Citation
-
-If you use MuonClip in your research, please cite:
-
-```
-@misc{muonclip2025,
-  author       = {axion66},
-  title        = {Efficient MuonClip: Flash-Muon + QKClip},
-  year         = {2025},
-  url          = {https://github.com/axion66/efficient-muonclip}
-}
-```
